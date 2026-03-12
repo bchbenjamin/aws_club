@@ -9,8 +9,8 @@ import ScrollReveal from '../components/ScrollReveal';
 
 const FEATURES = [
     {
-        title: 'Hands-on Workshops',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
+        title: 'Learn Cloud',
+        description: 'Hands-on learning sessions covering AWS services, architecture, and cloud fundamentals.',
         icon: (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -18,8 +18,8 @@ const FEATURES = [
         ),
     },
     {
-        title: 'Cloud Certifications',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud.',
+        title: 'Build Projects',
+        description: 'Members collaborate to build real-world cloud applications and technical solutions.',
         icon: (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -27,8 +27,8 @@ const FEATURES = [
         ),
     },
     {
-        title: 'Community Events',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.',
+        title: 'Community Growth',
+        description: 'A supportive learning environment where students share knowledge and grow together.',
         icon: (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -59,7 +59,7 @@ export default function AboutPage() {
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-text-primary dark:text-white leading-[0.9] tracking-tighter">
                             EMPOWERING
                             <br />
-                            <span className="text-gradient-purple-orange">CLOUD LEADERS</span>
+                            <span className="text-gradient-purple-orange">FUTURE CLOUD BUILDERS</span>
                         </h1>
                     </ScrollReveal>
                 </div>
@@ -74,19 +74,13 @@ export default function AboutPage() {
                             <ScrollReveal>
                                 <p className="text-xl md:text-2xl text-text-primary dark:text-white font-medium leading-relaxed tracking-tight">
                                     {/* COMMENT: Replace with a detailed paragraph about the club's mission */}
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    nisi ut aliquip ex ea commodo consequat.
+                                    AWS Cloud Club Atria is dedicated to helping students explore the world of cloud computing. Through workshops, collaborative projects, and industry exposure, we aim to give students practical experience with modern cloud technologies.
                                 </p>
                             </ScrollReveal>
                             <ScrollReveal delay={150}>
                                 <p className="mt-8 text-lg text-text-secondary dark:text-text-dark-secondary leading-relaxed">
                                     {/* COMMENT: Replace with a second paragraph about club history and growth */}
-                                    Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                    cupidatat non proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum.
+                                    Our vision is to create a strong community of cloud builders who are capable of designing scalable systems, building innovative solutions, and contributing to the global technology ecosystem.
                                 </p>
                             </ScrollReveal>
 
@@ -95,7 +89,7 @@ export default function AboutPage() {
                                 <div className="mt-12 grid grid-cols-3 gap-6">
                                     <div className="text-center p-6 rounded-3xl bg-white dark:bg-bg-dark-card border border-border-light dark:border-white/10 shadow-xl shadow-black/5 dark:shadow-black/20 card-hover">
                                         <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-amazon-orange to-amazon-blue">
-                                            50+
+                                            100+
                                         </div>
                                         <div className="text-xs md:text-sm font-bold tracking-widest uppercase text-text-secondary dark:text-text-dark-secondary mt-3">
                                             Members
@@ -103,7 +97,7 @@ export default function AboutPage() {
                                     </div>
                                     <div className="text-center p-6 rounded-3xl bg-white dark:bg-bg-dark-card border border-border-light dark:border-white/10 shadow-xl shadow-black/5 dark:shadow-black/20 card-hover">
                                         <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-amazon-orange to-amazon-blue">
-                                            20+
+                                            10+
                                         </div>
                                         <div className="text-xs md:text-sm font-bold tracking-widest uppercase text-text-secondary dark:text-text-dark-secondary mt-3">
                                             Events
@@ -111,7 +105,7 @@ export default function AboutPage() {
                                     </div>
                                     <div className="text-center p-6 rounded-3xl bg-white dark:bg-bg-dark-card border border-border-light dark:border-white/10 shadow-xl shadow-black/5 dark:shadow-black/20 card-hover">
                                         <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-amazon-orange to-amazon-blue">
-                                            10+
+                                            5+
                                         </div>
                                         <div className="text-xs md:text-sm font-bold tracking-widest uppercase text-text-secondary dark:text-text-dark-secondary mt-3">
                                             Projects

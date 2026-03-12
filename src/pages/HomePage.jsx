@@ -10,7 +10,7 @@ import ScrollReveal from '../components/ScrollReveal';
 const HIGHLIGHTS = [
     {
         title: 'Cloud Workshops',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.',
+        description: 'Hands-on learning sessions covering AWS services, architecture, and cloud fundamentals.',
         icon: (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -18,8 +18,8 @@ const HIGHLIGHTS = [
         ),
     },
     {
-        title: 'Industry Networking',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation.',
+        title: 'Hands-on Labs',
+        description: 'Practical labs to give you direct experience working with AWS cloud environments.',
         icon: (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -27,8 +27,17 @@ const HIGHLIGHTS = [
         ),
     },
     {
-        title: 'AWS Certifications',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate.',
+        title: 'Hackathons',
+        description: 'Collaborate with peers to build real-world cloud applications and technical solutions.',
+        icon: (
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+        ),
+    },
+    {
+        title: 'Industry Talks',
+        description: 'Gain insights and learn from professionals working in the cloud and tech industry.',
         icon: (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -36,21 +45,21 @@ const HIGHLIGHTS = [
         ),
     },
     {
-        title: 'Hackathons',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident.',
+        title: 'Builder Sessions',
+        description: 'Deep-dive sessions focusing on architecture, coding, and deploying to AWS.',
         icon: (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
         ),
     },
 ];
 
 const STATS = [
-    { value: '50+', label: 'Members' },
-    { value: '20+', label: 'Events Hosted' },
-    { value: '10+', label: 'Projects Built' },
-    { value: '15+', label: 'Certifications' },
+    { value: '100+', label: 'Members' },
+    { value: '10+', label: 'Events' },
+    { value: '5+', label: 'Projects' },
+    { value: 'Growing', label: 'Community' },
 ];
 
 export default function HomePage() {
@@ -66,6 +75,11 @@ export default function HomePage() {
           massive typography, and edge-to-edge striking design.
           ============================================================ */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-bg-primary dark:bg-bg-dark bg-grid-pattern">
+
+                {/* Hero Background Image */}
+                <div className="absolute inset-0 z-0 opacity-20 dark:opacity-30 pointer-events-none">
+                    <img src="/images/hero-banner.webp" alt="Hero Background" className="w-full h-full object-cover" />
+                </div>
 
                 {/* Animated glowing orbs (Purple & Orange) */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none mix-blend-screen dark:mix-blend-plus-lighter" aria-hidden="true">
@@ -85,17 +99,18 @@ export default function HomePage() {
 
                     <ScrollReveal delay={300}>
                         <h1 className="text-[12vw] sm:text-[10vw] md:text-8xl lg:text-9xl font-extrabold text-text-primary dark:text-white leading-[0.9] tracking-tighter">
-                            BUILD THE
+                            BUILD IN THE CLOUD
                             <br />
                             <span className="text-gradient-purple-orange">
-                                FUTURE
+                                WITH AWS
                             </span>
                         </h1>
                     </ScrollReveal>
 
                     <ScrollReveal delay={500}>
                         <p className="mt-8 md:mt-12 text-lg md:text-2xl text-text-secondary dark:text-text-dark-secondary max-w-3xl mx-auto leading-relaxed font-medium">
-                            We are a community of student developers, engineers, and creators exploring the bleeding edge of cloud computing, AI, and distributed systems.
+                            AWS Cloud Club Atria is a community of builders passionate about cloud computing.
+We learn, experiment, and build real-world solutions using AWS technologies while helping students grow their technical skills.
                         </p>
                     </ScrollReveal>
 
@@ -103,7 +118,7 @@ export default function HomePage() {
                         <div className="mt-12 md:mt-16 flex flex-col sm:flex-row gap-6 justify-center w-full sm:w-auto">
                             {/* Primary Neon CTA */}
                             <a
-                                href="https://tally.so/r/9q1QD5"
+                                href="https://www.meetup.com/aws-cloud-club-at-atria-inst-of-tech/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative inline-flex items-center justify-center px-10 py-5 bg-amazon-orange text-white font-bold rounded-2xl text-xl hover:bg-amazon-orange-hover transition-all duration-500 hover:scale-105 shadow-[0_0_40px_rgba(255,153,0,0.3)] hover:shadow-[0_0_60px_rgba(255,153,0,0.6)] overflow-hidden"
@@ -203,19 +218,19 @@ export default function HomePage() {
                         <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-text-primary dark:text-white leading-[0.9] tracking-tighter">
                             READY TO
                             <br />
-                            <span className="text-gradient-purple-orange">LAUNCH?</span>
+                            <span className="text-gradient-purple-orange">BUILD?</span>
                         </h2>
                     </ScrollReveal>
 
                     <ScrollReveal delay={200}>
                         <div className="mt-16">
                             <a
-                                href="https://tally.so/r/9q1QD5"
+                                href="https://www.meetup.com/aws-cloud-club-at-atria-inst-of-tech/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group inline-flex items-center justify-center px-12 py-6 bg-amazon-orange text-white font-black rounded-full text-2xl hover:bg-amazon-orange-hover transition-all duration-500 hover:scale-110 shadow-[0_0_50px_rgba(255,153,0,0.4)] hover:shadow-[0_0_80px_rgba(255,153,0,0.8)]"
                             >
-                                Let's Go
+                                Join the Club
                                 <svg
                                     className="ml-4 w-7 h-7 transition-transform duration-300 group-hover:translate-x-2"
                                     fill="none"

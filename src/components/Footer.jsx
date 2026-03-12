@@ -20,12 +20,11 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold mb-4 text-gradient-purple-orange inline-block">
                             {/* COMMENT: Replace with official club name */}
-                            AWS Cloud Club
+                            AWS Cloud Club Atria
                         </h3>
                         <p className="text-sm text-gray-300 leading-relaxed mb-6">
                             {/* COMMENT: Replace with a short 1-2 sentence description of the club and its college/university affiliation */}
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            AWS Cloud Club Atria is a student-led technical community focused on learning, building, and innovating with cloud technologies. We organize workshops, hands-on labs, hackathons, and collaborative sessions to help students explore AWS and real-world cloud development.
                         </p>
                         {/* Contact Email */}
                         <a
@@ -69,7 +68,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="https://tally.so/r/9q1QD5"
+                                    href="https://www.meetup.com/aws-cloud-club-at-atria-inst-of-tech/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-sm text-gray-400 hover:text-amazon-orange hover:translate-x-1 inline-block transition-all duration-300 font-bold"
@@ -87,7 +86,7 @@ export default function Footer() {
                             {/* COMMENT: Replace these placeholder links with actual resource URLs relevant to the club */}
                             <li>
                                 <a
-                                    href="https://aws.amazon.com/"
+                                    href="https://console.aws.amazon.com/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-sm text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
@@ -112,7 +111,17 @@ export default function Footer() {
                                     rel="noopener noreferrer"
                                     className="text-sm text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
                                 >
-                                    Developer Center
+                                    AWS Developer Center
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://docs.aws.amazon.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                                >
+                                    AWS Documentation
                                 </a>
                             </li>
                         </ul>
@@ -126,7 +135,7 @@ export default function Footer() {
 
                             {/* LinkedIn Icon */}
                             <a
-                                href="#"
+                                href="https://www.linkedin.com/company/aws-cloud-club-at-atria-inst-of-tech/posts/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="LinkedIn"
@@ -139,7 +148,7 @@ export default function Footer() {
 
                             {/* Instagram Icon */}
                             <a
-                                href="#"
+                                href="https://www.instagram.com/awscloudclub.atria/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Instagram"
@@ -152,7 +161,7 @@ export default function Footer() {
 
                             {/* Meetup Button */}
                             <a
-                                href="#"
+                                href="https://www.meetup.com/aws-cloud-club-at-atria-inst-of-tech/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Meetup"

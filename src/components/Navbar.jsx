@@ -61,7 +61,7 @@ export default function Navbar() {
                         />
                         <span className="text-lg md:text-xl font-bold text-amazon-navy dark:text-text-dark-primary tracking-tight">
                             {/* COMMENT: Replace with official club name, e.g. "AWS Cloud Club - [College Name]" */}
-                            AWS Cloud Club
+                            AWS Cloud Club Atria
                         </span>
                     </Link>
 
@@ -83,7 +83,7 @@ export default function Navbar() {
                             </Link>
                         ))}
                         <a
-                            href="https://tally.so/r/9q1QD5"
+                            href="https://www.meetup.com/aws-cloud-club-at-atria-inst-of-tech/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="ml-4 px-6 py-2.5 bg-amazon-orange text-white font-bold rounded-lg hover:bg-amazon-orange-hover transition-all duration-300 hover:shadow-lg hover:shadow-amazon-orange/25 hover:scale-105 text-sm"
@@ -135,7 +135,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <a
-                        href="https://tally.so/r/9q1QD5"
+                        href="https://www.meetup.com/aws-cloud-club-at-atria-inst-of-tech/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-2 px-6 py-3 bg-amazon-orange text-white font-bold rounded-lg text-center hover:bg-amazon-orange-hover transition-all duration-300 text-sm"

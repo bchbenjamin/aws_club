@@ -10,10 +10,11 @@ import ScrollReveal from '../components/ScrollReveal';
 const UPCOMING_EVENTS = [
     {
         month: 'APR', day: '05',
-        title: 'Introduction to AWS Cloud Computing',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        location: 'Seminar Hall A',
-        time: '2:00 PM - 4:00 PM',
+        title: 'AWS Cloud Fundamentals Workshop',
+        description: 'An introductory session covering AWS basics, cloud architecture, and how students can start building in the cloud.',
+        location: 'Atria Institute of Technology',
+        time: '2:00 PM – 4:00 PM',
+        imageSrc: '/images/events/event1.webp',
     },
 ];
 
@@ -37,13 +38,13 @@ export default function EventsPage() {
                             Upcoming Events
                         </div>
                         <h1 className="text-5xl md:text-7xl lg:text-9xl font-black text-text-primary dark:text-white leading-[0.9] tracking-tighter">
-                            WHAT'S
+                            UPCOMING
                             <br />
-                            <span className="text-gradient-purple-orange">HAPPENING</span>
+                            <span className="text-gradient-purple-orange">EVENTS</span>
                         </h1>
                         <p className="mt-8 text-xl text-text-secondary dark:text-text-dark-secondary max-w-3xl mx-auto font-medium">
                             {/* COMMENT: Replace with a short invite to attend events */}
-                            Join us for workshops, hackathons, and guest speaker sessions designed to accelerate your cloud journey.
+                            Explore workshops, learning sessions, and events organized by AWS Cloud Club Atria.
                         </p>
                     </ScrollReveal>
                 </div>
@@ -72,7 +73,7 @@ export default function EventsPage() {
                             <div className="inline-flex items-center justify-center p-1 rounded-full bg-gradient-to-r from-amazon-blue to-amazon-orange">
                                 <div className="px-8 py-3 rounded-full bg-bg-primary dark:bg-bg-dark text-sm font-bold text-text-primary dark:text-white tracking-widest uppercase">
                                     {/* COMMENT: Replace with actual text or link to full calendar */}
-                                    More Events Dropping Soon
+                                    More events coming soon.
                                 </div>
                             </div>
                         </div>
