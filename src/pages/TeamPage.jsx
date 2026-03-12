@@ -3,42 +3,44 @@ import MemberCard from '../components/MemberCard';
 import ScrollReveal from '../components/ScrollReveal';
 
 /**
- * TeamPage -- dedicated page displaying club leadership.
- * 1 Head and 2 Builders, with photo img tags.
+ * TeamPage -- Hackfest / Antigravity Style
+ * Edge-to-edge aesthetics, grid pattern, massive glowing headers.
  */
 
 const MEMBERS = [
     {
-        /* COMMENT: Replace name with the actual Club Head's full name */
         name: 'Jane Doe',
-        /* COMMENT: Replace role with the official title */
         role: 'Club Head',
-        /* COMMENT: Replace bio with a 2-3 sentence real biography */
         bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        /* COMMENT: Replace with path to the Club Head's headshot. Save as /public/images/members/head.webp */
         imageSrc: '/images/members/head.webp',
         featured: true,
     },
     {
-        /* COMMENT: Replace with first Builder's full name */
         name: 'John Smith',
-        /* COMMENT: Replace with official title, e.g. "Builder" */
         role: 'Builder',
-        /* COMMENT: Replace with real biography */
         bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-        /* COMMENT: Replace with path to first Builder's headshot. Save as /public/images/members/builder-1.webp */
         imageSrc: '/images/members/builder-1.webp',
         featured: false,
     },
     {
-        /* COMMENT: Replace with second Builder's full name */
         name: 'Alice Johnson',
-        /* COMMENT: Replace with official title */
         role: 'Builder',
-        /* COMMENT: Replace with real biography */
         bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
-        /* COMMENT: Replace with path to second Builder's headshot. Save as /public/images/members/builder-2.webp */
         imageSrc: '/images/members/builder-2.webp',
+        featured: false,
+    },
+    {
+        name: 'Bob Williams',
+        role: 'Designer',
+        bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
+        imageSrc: '/images/members/builder-3.webp',
+        featured: false,
+    },
+    {
+        name: 'Eve Davis',
+        role: 'Marketing',
+        bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
+        imageSrc: '/images/members/builder-4.webp',
         featured: false,
     },
 ];
@@ -49,27 +51,26 @@ export default function TeamPage() {
     }, []);
 
     return (
-        <div className="page-enter">
-            {/* Page Banner */}
-            <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-amazon-navy dark:bg-black overflow-hidden">
-                <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-                    <div className="absolute bottom-0 left-[15%] w-72 h-72 rounded-full bg-amazon-blue/5 blur-[100px]" />
+        <div className="page-enter bg-bg-primary dark:bg-bg-dark bg-grid-pattern min-h-screen relative">
+            {/* Page Banner with glowing orbs */}
+            <section className="relative pt-32 pb-20 md:pt-48 md:pb-28 overflow-hidden">
+                <div className="absolute inset-0 overflow-hidden pointer-events-none mix-blend-screen dark:mix-blend-plus-lighter" aria-hidden="true">
+                    <div className="absolute bottom-[-10%] left-[20%] w-[400px] h-[400px] rounded-full bg-amazon-blue/20 dark:bg-amazon-blue/30 blur-[120px] animate-float" />
                 </div>
+
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <ScrollReveal>
                         <div className="text-center">
-                            <div className="flex items-center justify-center gap-3 mb-4">
-                                <div className="w-12 h-1 bg-amazon-orange rounded-full" />
-                                <span className="text-sm font-bold uppercase tracking-wider text-amazon-orange">
-                                    Our Team
-                                </span>
-                                <div className="w-12 h-1 bg-amazon-orange rounded-full" />
+                            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amazon-navy/5 dark:bg-white/10 backdrop-blur-md border border-black/10 dark:border-white/20 text-sm font-bold text-text-primary dark:text-white uppercase tracking-widest mb-8">
+                                <span className="w-2 h-2 rounded-full bg-amazon-orange animate-pulse" />
+                                The People
                             </div>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                                {/* COMMENT: Replace with a real heading */}
-                                Meet the People Behind the Club
+                            <h1 className="text-5xl md:text-7xl lg:text-9xl font-black text-text-primary dark:text-white leading-[0.9] tracking-tighter">
+                                MEET THE
+                                <br />
+                                <span className="text-gradient-purple-orange">CREATORS</span>
                             </h1>
-                            <p className="mt-4 text-lg text-white/60 max-w-2xl mx-auto">
+                            <p className="mt-8 text-xl text-text-secondary dark:text-text-dark-secondary max-w-3xl mx-auto font-medium">
                                 {/* COMMENT: Replace with a short description about the leadership team */}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -80,9 +81,10 @@ export default function TeamPage() {
             </section>
 
             {/* Members Grid */}
-            <section className="py-20 md:py-28 bg-bg-secondary dark:bg-black">
+            <section className="py-20 md:py-28 relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    {/* We use an asymmetric grid: head takes up more space */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                         {MEMBERS.map((member, index) => (
                             <MemberCard
                                 key={member.name}
@@ -91,26 +93,26 @@ export default function TeamPage() {
                                 bio={member.bio}
                                 imageSrc={member.imageSrc}
                                 featured={member.featured}
-                                delay={200 * (index + 1)}
+                                delay={150 * (index + 1)}
                             />
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Join CTA */}
-            <section className="py-20 md:py-24 bg-bg-primary dark:bg-black">
-                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            {/* Join CTA (Neon Border Block) */}
+            <section className="py-32 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-amazon-blue/10 to-transparent pointer-events-none" />
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                     <ScrollReveal>
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-text-dark-primary">
-                            {/* COMMENT: Replace with an invitation to join the team */}
-                            Want to Be Part of the Team?
+                        <h2 className="text-4xl md:text-6xl font-black text-text-primary dark:text-white tracking-tighter">
+                            BECOME A BUILDER.
                         </h2>
                     </ScrollReveal>
                     <ScrollReveal delay={200}>
-                        <p className="mt-4 text-lg text-text-secondary dark:text-text-dark-secondary">
+                        <p className="mt-6 text-xl text-text-secondary dark:text-text-dark-secondary">
                             {/* COMMENT: Replace with details about how to join or apply as a builder */}
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Join our core team and help architect the future of student cloud initiatives.
                         </p>
                     </ScrollReveal>
                     <ScrollReveal delay={400}>
@@ -118,11 +120,11 @@ export default function TeamPage() {
                             href="https://tally.so/r/9q1QD5"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center mt-8 px-8 py-4 bg-amazon-orange text-white font-bold rounded-xl text-lg hover:bg-amazon-orange-hover transition-all duration-400 hover:scale-105 hover:shadow-2xl hover:shadow-amazon-orange/30"
+                            className="group inline-flex items-center justify-center mt-12 px-10 py-5 bg-amazon-orange text-white font-black rounded-2xl text-xl hover:bg-amazon-orange-hover transition-all duration-500 hover:scale-110 shadow-[0_0_40px_rgba(255,153,0,0.3)] hover:shadow-[0_0_60px_rgba(255,153,0,0.6)]"
                         >
                             Apply Now
-                            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            <svg className="ml-3 w-6 h-6 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
                         </a>
                     </ScrollReveal>

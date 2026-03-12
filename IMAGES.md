@@ -1,55 +1,29 @@
-# Images Catalog
+# AWS Cloud Club - Required Images & Assets Catalog
 
-A complete catalog of every image used in the AWS Cloud Club website. For each image, the file path, recommended format, and a description of what it should look like are documented below.
+This document details every image required for the website. The frontend has been fully redesigned to represent a "Hackfest/Antigravity" aesthetic (neon/grid/AMOLED black), so photography should ideally match this vibe (e.g. low light, vivid colors, neon signs, tech/hacking vibes).
 
----
+All images should be placed in the `/public/` directory (or its subdirectories) so Vite can serve them directly via absolute paths (e.g., `/images/hero-bg.webp`).
 
-## Logo
-
-| # | File Path | File Name | Format | Description |
-|---|-----------|-----------|--------|-------------|
-| 1 | `/public/images/` | `aws-cloud-club-logo.png` | PNG (transparent bg) | The official AWS Cloud Club logo. Should be a clean vector-style logo combining the AWS smile/arrow motif with the club or college identity. Recommended dimensions: 200x200px minimum, transparent background. |
-
----
-
-## Hero Section
-
-| # | File Path | File Name | Format | Description |
-|---|-----------|-----------|--------|-------------|
-| 2 | `/public/images/` | `hero-bg.webp` | WebP | A wide, high-resolution background image for the hero section. Should depict either: (a) cloud computing infrastructure with a futuristic/abstract feel, or (b) a wide-angle photo of club members at a tech event. Recommended dimensions: 1920x1080px minimum. The image will be displayed behind a dark gradient overlay, so it works best with a darker tone. |
-
----
-
-## About Section
-
-| # | File Path | File Name | Format | Description |
-|---|-----------|-----------|--------|-------------|
-| 3 | `/public/images/` | `about-club.webp` | WebP | A candid group photo of AWS Cloud Club members collaborating during a workshop or event. Should show real people in a learning environment (laptops open, whiteboard in background, etc.). Recommended dimensions: 800x600px minimum. |
-
----
-
-## Members Section
-
-| # | File Path | File Name | Format | Description |
-|---|-----------|-----------|--------|-------------|
-| 4 | `/public/images/members/` | `head.webp` | WebP | A professional headshot of the Club Head. Should be against a neutral or solid-color background, well-lit, and cropped from shoulders up. Recommended dimensions: 400x400px (square). |
-| 5 | `/public/images/members/` | `builder-1.webp` | WebP | A professional headshot of the first Builder member. Same style as the Head's photo -- neutral background, good lighting, shoulders-up crop. Recommended dimensions: 400x400px (square). |
-| 6 | `/public/images/members/` | `builder-2.webp` | WebP | A professional headshot of the second Builder member. Same style as the other member photos -- neutral background, good lighting, shoulders-up crop. Recommended dimensions: 400x400px (square). |
-
----
+| Component | Intended Usage | Expected File Path | Format | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| **`Navbar.jsx`** | Club Logo (Global Header) | `/images/aws-cloud-club-logo.png` | `.png` | Needs a transparent background. Ideally features white/orange/purple text to stand out against the glassmorphism dark Navbar background. |
+| **`HomePage.jsx`** | Hero Background | `/images/hero-bg.webp` | `.webp` | High-quality image covering the full screen. Due to the black opacity overlay, an atmospheric, dark, neon-lit photo of a hackathon or code on a screen works perfectly here. |
+| **`AboutPage.jsx`** | Image Grid 1 (Workshops) | `/images/about-1.webp` | `.webp` | A photo of members collaborating or a speaker presenting. Used in a stylized hovering 3D card layout. |
+| **`AboutPage.jsx`** | Image Grid 2 (Hackathons) | `/images/about-2.webp` | `.webp` | A photo of a hackathon, laptops, or an energetic tech event. Used alongside image 1 in the 3D card layout. |
+| **`TeamPage.jsx`** | Club Head Headshot | `/images/members/head.webp` | `.webp` | Professional headshot, square aspect ratio (e.g., 800x800). Will be cropped into a circle. |
+| **`TeamPage.jsx`** | Builder 1 Headshot | `/images/members/builder-1.webp` | `.webp` | Headshot, square aspect ratio. Cropped to circle. |
+| **`TeamPage.jsx`** | Builder 2 Headshot | `/images/members/builder-2.webp` | `.webp` | Headshot, square aspect ratio. Cropped to circle. |
+| **`TeamPage.jsx`** | Builder 3 Headshot | `/images/members/builder-3.webp` | `.webp` | Headshot, square aspect ratio. Cropped to circle. |
+| **`TeamPage.jsx`** | Builder 4 Headshot | `/images/members/builder-4.webp` | `.webp` | Headshot, square aspect ratio. Cropped to circle. |
 
 ## Fonts
+The site natively uses **Amazon Ember**. The `@font-face` declarations look for the `.woff2` files in the following paths. If they are missing, the site will cleanly fallback to system sans-serif fonts (Helvetica, Arial, etc).
 
-| # | File Path | File Name | Format | Description |
-|---|-----------|-----------|--------|-------------|
-| 7 | `/public/fonts/` | `AmazonEmber_Rg.woff2` | WOFF2 | Amazon Ember Regular (400 weight). The primary body text font. Obtain from Amazon's brand resources or an authorized source. |
-| 8 | `/public/fonts/` | `AmazonEmber_Bd.woff2` | WOFF2 | Amazon Ember Bold (700 weight). Used for headings and emphasis. |
-| 9 | `/public/fonts/` | `AmazonEmber_Lt.woff2` | WOFF2 | Amazon Ember Light (300 weight). Used for subtle, lighter text. |
+- `/fonts/AmazonEmber_Rg.woff2` (Regular 400)
+- `/fonts/AmazonEmber_Bd.woff2` (Bold 700)
+- `/fonts/AmazonEmber_Lt.woff2` (Light 300)
 
----
-
-## Summary
-
-- **Total images**: 6 (1 logo + 1 hero background + 1 about photo + 3 member headshots)
-- **Total font files**: 3 (Regular, Bold, Light weights of Amazon Ember)
-- **Preferred format**: WebP for photographs (better compression), PNG for logos (transparency support), WOFF2 for fonts (best web performance)
+## Optimization Tips
+- Convert all photographic images to `.webp` to significantly improve load times.
+- Try to compress Hero backgrounds heavily; they are obscured by black/neon overlays, so compression artifacts will be largely invisible.
+- Headshots should ideally be centered and have a consistent background style across the team.

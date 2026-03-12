@@ -22,11 +22,9 @@ export default function CustomCursor() {
     const cursorYSpring = useSpring(cursorY, springConfig);
 
     useEffect(() => {
-        // Disable on touch devices
-        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-            setIsMobile(true);
-            return;
-        }
+        // The cursor is hidden by default (opacity: 0).
+        // It will only appear when a mousemove event is detected.
+        // CSS handles hiding the default system cursor via @media (pointer: fine).
 
         const moveCursor = (e) => {
             cursorX.set(e.clientX - 16); // Center the 32px cursor
@@ -54,8 +52,6 @@ export default function CustomCursor() {
             window.removeEventListener('mouseout', handleMouseOut);
         };
     }, [cursorX, cursorY, isVisible]);
-
-    if (isMobile) return null;
 
     return (
         <>
