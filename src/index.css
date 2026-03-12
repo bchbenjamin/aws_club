@@ -3,41 +3,41 @@
 /* ================================================================
    AWS Cloud Club -- Design System
    Colors, fonts, and animations matching amazon.science / aboutamazon.com
+   AMOLED-optimized dark mode (pure black backgrounds)
    ================================================================ */
 
 @theme {
   /* ---- Color Palette ---- */
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #F5F7FA;
-  --color-bg-dark: #0F1111;
-  --color-bg-dark-secondary: #1A1F2E;
+  --color-bg-dark: #000000;
+  --color-bg-dark-secondary: #0A0A0A;
+  --color-bg-dark-card: #111111;
 
   --color-text-primary: #232F3E;
   --color-text-secondary: #545B64;
-  --color-text-dark-primary: #E8EAED;
-  --color-text-dark-secondary: #9AA0A6;
+  --color-text-dark-primary: #F0F0F0;
+  --color-text-dark-secondary: #8A8F98;
 
   --color-amazon-orange: #FF9900;
   --color-amazon-orange-hover: #EC7211;
   --color-amazon-blue: #00A8E1;
   --color-amazon-navy: #232F3E;
-  --color-amazon-dark-navy: #161D25;
+  --color-amazon-dark-navy: #0A0A0A;
 
   --color-border-light: #D5D9D9;
-  --color-border-dark: #2E3440;
+  --color-border-dark: #1A1A1A;
 
-  /* ---- Font Family ----
-     Amazon Ember is Amazon's proprietary typeface.
-     We load it via self-hosted @font-face below.
-     Fallback chain: system sans-serif stack. */
+  /* ---- Font Family ---- */
   --font-sans: "Amazon Ember", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* ---- Animation Timing ---- */
   --animate-fade-up: fade-up 0.7s ease-out forwards;
   --animate-fade-in: fade-in 0.5s ease-out forwards;
-  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2.5s ease-in-out infinite;
   --animate-float: float 6s ease-in-out infinite;
   --animate-slide-down: slide-down 0.3s ease-out forwards;
+  --animate-shimmer: shimmer 2.5s linear infinite;
 }
 
 /* ================================================================
@@ -74,8 +74,9 @@
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -83,23 +84,34 @@
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 153, 0, 0.3);
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(255, 153, 0, 0.25);
   }
+
   50% {
-    box-shadow: 0 0 40px rgba(255, 153, 0, 0.6);
+    box-shadow: 0 0 50px rgba(255, 153, 0, 0.5), 0 0 80px rgba(255, 153, 0, 0.2);
   }
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -110,9 +122,32 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
   }
 }
 
@@ -132,7 +167,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ---- Dark Mode (system preference) ---- */
+/* ---- Dark Mode (system preference, AMOLED black) ---- */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--color-bg-dark);
@@ -142,11 +177,13 @@ body {
 
 /* ================================================================
    Scroll-reveal utility: elements start hidden, animated in by JS.
+   Longer durations + cubic-bezier for fluid, premium feel.
    ================================================================ */
 .reveal-hidden {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .reveal-visible {
@@ -154,30 +191,86 @@ body {
   transform: translateY(0);
 }
 
-/* Staggered delay classes */
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+/* Staggered delay classes -- generous spacing for cinematic feel */
+.reveal-delay-1 {
+  transition-delay: 0.15s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.45s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.6s;
+}
+
+.reveal-delay-5 {
+  transition-delay: 0.75s;
+}
 
 /* ================================================================
-   Custom scrollbar (dark mode friendly)
+   Page transition wrapper
+   ================================================================ */
+.page-enter {
+  animation: fade-up 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* ================================================================
+   Enhanced hover effects
+   ================================================================ */
+.card-hover {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-hover:hover {
+    box-shadow: 0 20px 60px rgba(255, 153, 0, 0.08), 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ================================================================
+   Gradient text utility
+   ================================================================ */
+.text-gradient-orange {
+  background: linear-gradient(135deg, #FF9900, #EC7211, #FF9900);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ================================================================
+   Custom scrollbar (AMOLED-friendly)
    ================================================================ */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-bg-secondary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-border-light);
-  border-radius: 4px;
+  border-radius: 3px;
 }
+
 @media (prefers-color-scheme: dark) {
   ::-webkit-scrollbar-track {
-    background: var(--color-bg-dark-secondary);
+    background: #000000;
   }
+
   ::-webkit-scrollbar-thumb {
-    background: var(--color-border-dark);
+    background: #1A1A1A;
   }
 }

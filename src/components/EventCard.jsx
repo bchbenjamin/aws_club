@@ -1,26 +1,16 @@
-import ScrollReveal from './ScrollReveal';
+import ScrollReveal from '../components/ScrollReveal';
 
 /**
  * EventCard -- displays an upcoming event with date badge,
  * title, description, and location.
- * Features a timeline-style orange left border and hover lift.
- *
- * Props:
- *  - date        : string (e.g. "Mar 25")
- *  - month       : string (e.g. "MAR")
- *  - day         : string (e.g. "25")
- *  - title       : string
- *  - description : string
- *  - location    : string
- *  - time        : string (e.g. "2:00 PM - 4:00 PM")
- *  - delay       : number (scroll-reveal stagger index)
+ * Enhanced hover: card lifts, orange left border thickens, title colors.
  */
 export default function EventCard({ month, day, title, description, location, time, delay = 0 }) {
     return (
         <ScrollReveal delay={delay}>
-            <div className="group flex gap-4 md:gap-6 bg-white dark:bg-bg-dark-secondary rounded-xl border border-border-light dark:border-border-dark p-5 md:p-6 transition-all duration-300 hover:shadow-lg hover:shadow-amazon-orange/5 hover:-translate-y-1 border-l-4 border-l-amazon-orange">
+            <div className="group flex gap-4 md:gap-6 bg-white dark:bg-bg-dark-card rounded-2xl border border-border-light dark:border-border-dark p-5 md:p-6 card-hover border-l-4 border-l-amazon-orange">
                 {/* Date Badge */}
-                <div className="shrink-0 flex flex-col items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-lg bg-amazon-orange/10 dark:bg-amazon-orange/20 text-amazon-orange">
+                <div className="shrink-0 flex flex-col items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-xl bg-amazon-orange/10 dark:bg-amazon-orange/15 text-amazon-orange transition-all duration-400 group-hover:bg-amazon-orange group-hover:text-white group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-amazon-orange/30">
                     <span className="text-xs font-bold uppercase tracking-wider">
                         {/* COMMENT: Replace with the actual month abbreviation for this event */}
                         {month}
@@ -33,7 +23,7 @@ export default function EventCard({ month, day, title, description, location, ti
 
                 {/* Event Details */}
                 <div className="flex-1 min-w-0">
-                    <h3 className="text-base md:text-lg font-bold text-text-primary dark:text-text-dark-primary group-hover:text-amazon-orange transition-colors duration-200 truncate">
+                    <h3 className="text-base md:text-lg font-bold text-text-primary dark:text-text-dark-primary group-hover:text-amazon-orange transition-colors duration-300 truncate">
                         {/* COMMENT: Replace with the actual event name/title */}
                         {title}
                     </h3>
@@ -43,7 +33,7 @@ export default function EventCard({ month, day, title, description, location, ti
                     </p>
                     <div className="mt-3 flex flex-wrap items-center gap-4 text-xs text-text-secondary dark:text-text-dark-secondary">
                         {/* Location */}
-                        <span className="flex items-center gap-1">
+                        <span className="flex items-center gap-1.5 group-hover:text-text-primary dark:group-hover:text-text-dark-primary transition-colors duration-300">
                             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -52,7 +42,7 @@ export default function EventCard({ month, day, title, description, location, ti
                             {location}
                         </span>
                         {/* Time */}
-                        <span className="flex items-center gap-1">
+                        <span className="flex items-center gap-1.5 group-hover:text-text-primary dark:group-hover:text-text-dark-primary transition-colors duration-300">
                             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
