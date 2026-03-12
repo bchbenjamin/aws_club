@@ -5,19 +5,23 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import TeamPage from './pages/TeamPage';
 import EventsPage from './pages/EventsPage';
+import CustomCursor from './components/CustomCursor';
 
 /**
  * App -- root component with React Router for multi-page navigation.
- * Each section lives on its own route:
- *   /       -> HomePage
- *   /about  -> AboutPage
- *   /team   -> TeamPage
- *   /events -> EventsPage
+ * Wraps everything in the Black/Purple/Orange theme context.
+ * Injects CustomCursor at the highest level so it persists across pages.
  */
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-bg-primary dark:bg-black text-text-primary dark:text-text-dark-primary">
+      {/* 
+        The CustomCursor handles its own mobile-hiding logic.
+        It sits at the top level to avoid re-mounting on route changes.
+      */}
+      <CustomCursor />
+
+      <div className="min-h-screen bg-bg-primary dark:bg-bg-dark text-text-primary dark:text-text-dark-primary font-sans">
         <Navbar />
         <main>
           <Routes>
