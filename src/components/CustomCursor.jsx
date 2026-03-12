@@ -58,8 +58,8 @@ export default function CustomCursor() {
             <motion.div
                 className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9999] mix-blend-difference"
                 style={{
-                    x: cursorXSpring,
-                    y: cursorYSpring,
+                    x: cursorX,
+                    y: cursorY,
                     opacity: isVisible ? 1 : 0,
                 }}
                 animate={{
@@ -72,8 +72,8 @@ export default function CustomCursor() {
             <motion.div
                 className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9998] blur-[12px]"
                 style={{
-                    x: cursorXSpring,
-                    y: cursorYSpring,
+                    x: cursorX,
+                    y: cursorY,
                     opacity: isVisible ? 0.6 : 0,
                 }}
                 animate={{

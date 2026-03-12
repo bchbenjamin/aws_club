@@ -6,15 +6,27 @@ This guide details exactly which files you need to edit to replace placeholder t
 **File: `src/components/Navbar.jsx`**
 - Line 50: Replace the club logo (`/images/aws-cloud-club-logo.png`).
 - Line 55: Replace `"AWS Cloud Club"` with your official club name.
-- Lines 77 & 116: Replace `https://tally.so/r/9q1QD5` with your actual Join link.
+- Lines 77 & 116: Replace the Tally join link with your actual link, e.g.:
+  ```jsx
+  <a href="">Join Us</a>
+  ```
 
 **File: `src/components/Footer.jsx`**
 - Line 20: Replace `"AWS Cloud Club"` with official club name.
 - Line 24: Replace the Lorem Ipsum club description.
-- Lines 70-105: Update the "Resources" links to point to relevant AWS or college resources.
-- Lines 116-154: Update the `href` attributes for LinkedIn, Instagram, and Meetup to your club's actual social profiles.
+- Lines 70-105: Update the "Resources" links to point to relevant AWS or college resources, e.g.:
+  ```jsx
+  <a href="">AWS Console</a>
+  <a href="">AWS Training</a>
+  <a href="">Developer Center</a>
+  ```
+- Lines 116-154: Update the social profiles for LinkedIn, Instagram, and Meetup, e.g.:
+  ```jsx
+  <a href="" aria-label="LinkedIn">...</a>
+  <a href="" aria-label="Instagram">...</a>
+  <a href="" aria-label="Meetup">...</a>
+  ```
 - Line 32: Ensure the email `awscloudclubatria@gmail.com` is correct.
-- Lines 166 & 170: Replace placeholder text with your actual college/university name.
 
 ## 2. Home Page (`src/pages/HomePage.jsx`)
 - Line 60: Replace the `HIGHLIGHTS` array (Workshops, Hackathons, etc).
@@ -22,9 +34,9 @@ This guide details exactly which files you need to edit to replace placeholder t
 - Line 93: Replace the hero main headline `"BUILD THE FUTURE"`.
 - Line 95: Replace the hero sub-headline `"FUTURE"`.
 - Line 100: Replace the 2-3 sentence introductory paragraph.
-- Line 106: Replace the Join link `https://tally.so/r/9q1QD5`.
+- Line 106: Replace the Join link `https://tally.so/r/9q1QD5` with an empty anchor: `<a href="">Join the Club</a>`.
 - Line 202: Replace the final CTA headline `"READY TO LAUNCH?"`.
-- Line 213: Replace the final CTA Join link.
+- Line 213: Replace the final CTA Join link with `<a href="">Let's Go</a>`.
 
 ## 3. About Page (`src/pages/AboutPage.jsx`)
 - Line 10-24: Update the `FEATURES` array with actual feature descriptions and titles.
@@ -35,7 +47,7 @@ This guide details exactly which files you need to edit to replace placeholder t
 - Line 117: Replace the Image 2 placeholder (`/images/about-2.webp`).
 
 ## 4. Team Page (`src/pages/TeamPage.jsx`)
-- Lines 11-44: Update the `MEMBERS` array. For each member you must provide:
+- Lines 11-30: Update the `MEMBERS` array for your 3 core members. For each member you must provide:
   - `name`: Full name
   - `role`: Official title (e.g., "Club Head", "Builder")
   - `bio`: A short 2-3 sentence biography.
@@ -44,10 +56,10 @@ This guide details exactly which files you need to edit to replace placeholder t
 - Line 68: Replace the banner description.
 - Line 98: Replace the Join the Team CTA heading `"BECOME A BUILDER."`.
 - Line 102: Replace the Join the Team description.
-- Line 107: Replace the Join the Team application link.
+- Line 107: Replace the Join the Team application link with `<a href="">Apply Now</a>`.
 
 ## 5. Events Page (`src/pages/EventsPage.jsx`)
-- Lines 11-38: Update the `UPCOMING_EVENTS` array. For each event you must provide:
+- Lines 11-17: Update the **single event placeholder** in the `UPCOMING_EVENTS` array. Provide:
   - `month` (e.g., "APR")
   - `day` (e.g., "05")
   - `title`: Event name

@@ -13,8 +13,6 @@ All images should be placed in the `/public/` directory (or its subdirectories) 
 | **`TeamPage.jsx`** | Club Head Headshot | `/images/members/head.webp` | `.webp` | Professional headshot, square aspect ratio (e.g., 800x800). Will be cropped into a circle. |
 | **`TeamPage.jsx`** | Builder 1 Headshot | `/images/members/builder-1.webp` | `.webp` | Headshot, square aspect ratio. Cropped to circle. |
 | **`TeamPage.jsx`** | Builder 2 Headshot | `/images/members/builder-2.webp` | `.webp` | Headshot, square aspect ratio. Cropped to circle. |
-| **`TeamPage.jsx`** | Builder 3 Headshot | `/images/members/builder-3.webp` | `.webp` | Headshot, square aspect ratio. Cropped to circle. |
-| **`TeamPage.jsx`** | Builder 4 Headshot | `/images/members/builder-4.webp` | `.webp` | Headshot, square aspect ratio. Cropped to circle. |
 
 ## Fonts
 The site natively uses **Amazon Ember**. The `@font-face` declarations look for the `.woff2` files in the following paths. If they are missing, the site will cleanly fallback to system sans-serif fonts (Helvetica, Arial, etc).

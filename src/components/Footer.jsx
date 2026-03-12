@@ -175,7 +175,7 @@ export default function Footer() {
                     </p>
                     <p className="text-xs text-gray-500 font-medium tracking-wide">
                         {/* COMMENT: Replace with the actual college/university name */}
-                        A student-led community at [College Name]
+                        A student-led community at Atria Institute of Technology
                     </p>
                 </div>
             </div>

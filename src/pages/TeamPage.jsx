@@ -29,20 +29,6 @@ const MEMBERS = [
         imageSrc: '/images/members/builder-2.webp',
         featured: false,
     },
-    {
-        name: 'Bob Williams',
-        role: 'Designer',
-        bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
-        imageSrc: '/images/members/builder-3.webp',
-        featured: false,
-    },
-    {
-        name: 'Eve Davis',
-        role: 'Marketing',
-        bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
-        imageSrc: '/images/members/builder-4.webp',
-        featured: false,
-    },
 ];
 
 export default function TeamPage() {

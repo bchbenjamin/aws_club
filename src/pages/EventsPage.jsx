@@ -15,27 +15,6 @@ const UPCOMING_EVENTS = [
         location: 'Seminar Hall A',
         time: '2:00 PM - 4:00 PM',
     },
-    {
-        month: 'APR', day: '15',
-        title: 'Hands-on Lab: Deploying with EC2 & S3',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
-        location: 'Computer Lab 2',
-        time: '3:00 PM - 5:30 PM',
-    },
-    {
-        month: 'MAY', day: '01',
-        title: 'AWS Solutions Architect Study Group',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse.',
-        location: 'Library Meeting Room',
-        time: '1:00 PM - 3:00 PM',
-    },
-    {
-        month: 'MAY', day: '20',
-        title: 'Cloud Hackathon: Build & Deploy Challenge',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
-        location: 'Innovation Center',
-        time: '9:00 AM - 6:00 PM',
-    },
 ];
 
 export default function EventsPage() {
