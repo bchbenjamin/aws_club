@@ -11,22 +11,17 @@ export default function Footer() {
 
     return (
         <footer className="bg-amazon-navy dark:bg-black text-white relative border-t border-border-light/10">
-            {/* Subtle top glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-amazon-blue/50 to-transparent" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-                    {/* Column 1 -- Club Info */}
                     <div>
                         <h3 className="text-lg font-bold mb-4 text-gradient-purple-orange inline-block">
-                            {/* COMMENT: Replace with official club name */}
                             AWS Cloud Club Atria
                         </h3>
                         <p className="text-sm text-gray-300 leading-relaxed mb-6">
-                            {/* COMMENT: Replace with a short 1-2 sentence description of the club and its college/university affiliation */}
                             AWS Cloud Club Atria is a student-led technical community focused on learning, building, and innovating with cloud technologies. We organize workshops, hands-on labs, hackathons, and collaborative sessions to help students explore AWS and real-world cloud development.
                         </p>
-                        {/* Contact Email */}
                         <a
                             href="mailto:awscloudclubatria@gmail.com"
                             className="inline-flex items-center text-sm font-medium text-amazon-orange hover:text-amazon-orange-hover transition-colors duration-300"
@@ -38,7 +33,6 @@ export default function Footer() {
                         </a>
                     </div>
 
-                    {/* Column 2 -- Quick Links */}
                     <div>
                         <h3 className="text-lg font-bold mb-4 text-white">Quick Links</h3>
                         <ul className="space-y-3">
@@ -68,7 +62,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="https://www.meetup.com/aws-cloud-club-at-atria-inst-of-tech/"
+                                    href="https://tally.so/r/9q1QD5"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-sm text-gray-400 hover:text-amazon-orange hover:translate-x-1 inline-block transition-all duration-300 font-bold"
@@ -79,11 +73,9 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Column 3 -- Resources */}
                     <div>
                         <h3 className="text-lg font-bold mb-4 text-white">Resources</h3>
                         <ul className="space-y-3">
-                            {/* COMMENT: Replace these placeholder links with actual resource URLs relevant to the club */}
                             <li>
                                 <a
                                     href="https://console.aws.amazon.com/"
@@ -127,15 +119,12 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Column 4 -- Connect */}
                     <div>
                         <h3 className="text-lg font-bold mb-4 text-white">Connect</h3>
                         <div className="flex gap-3">
-                            {/* COMMENT: Replace href values with the club's actual social media profile URLs */}
 
-                            {/* LinkedIn Icon */}
                             <a
-                                href="https://www.linkedin.com/company/aws-cloud-club-at-atria-inst-of-tech/posts/"
+                                href="https://www.linkedin.com/company/aws-cloud-club-at-atria-inst-of-tech/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="LinkedIn"
@@ -146,7 +135,6 @@ export default function Footer() {
                                 </svg>
                             </a>
 
-                            {/* Instagram Icon */}
                             <a
                                 href="https://www.instagram.com/awscloudclub.atria/"
                                 target="_blank"
@@ -159,7 +147,6 @@ export default function Footer() {
                                 </svg>
                             </a>
 
-                            {/* Meetup Button */}
                             <a
                                 href="https://www.meetup.com/aws-cloud-club-at-atria-inst-of-tech/"
                                 target="_blank"
@@ -167,7 +154,6 @@ export default function Footer() {
                                 aria-label="Meetup"
                                 className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-amazon-orange hover:scale-110 hover:border-transparent hover:shadow-[0_0_15px_rgba(255,153,0,0.5)] transition-all duration-300"
                             >
-                                {/* COMMENT: Replace href with the club's actual Meetup group URL */}
                                 <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M18.71 12.21c-.18-.18-.43-.29-.71-.29h-1c0-.28-.11-.53-.29-.71s-.43-.29-.71-.29h-1v-2c0-.28-.11-.53-.29-.71s-.43-.29-.71-.29-.53.11-.71.29-.29.43-.29.71v5c0 .55-.45 1-1 1s-1-.45-1-1v-3c0-.28-.11-.53-.29-.71s-.43-.29-.71-.29-.53.11-.71.29-.29.43-.29.71v3c0 .55-.45 1-1 1s-1-.45-1-1v-2c0-.28-.11-.53-.29-.71C6.53 11.11 6.28 11 6 11s-.53.11-.71.29-.29.43-.29.71v2c0 .55-.45 1-1 1s-1-.45-1-1v-1c0-.28-.11-.53-.29-.71S2.28 12 2 12s-.53.11-.71.29-.29.43-.29.71v1c0 1.66 1.34 3 3 3 .95 0 1.78-.45 2.33-1.14C6.82 15.52 7.36 16 8 16c.95 0 1.78-.45 2.33-1.14.49.66 1.24 1.14 2.17 1.14.95 0 1.78-.45 2.33-1.14.49.66 1.24 1.14 2.17 1.14 1.66 0 3-1.34 3-3v-1c0-.28-.11-.53-.29-.71zM12 2C6.48 2 2 6.48 2 12h2c0-4.41 3.59-8 8-8s8 3.59 8 8h2c0-5.52-4.48-10-10-10z" />
                                 </svg>
@@ -176,15 +162,12 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
                 <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-xs text-gray-500 font-medium">
-                        {/* COMMENT: Replace with actual college name and club name */}
                         &copy; {currentYear} AWS Cloud Club. All rights reserved.
                     </p>
                     <p className="text-xs text-gray-500 font-medium tracking-wide">
-                        {/* COMMENT: Replace with the actual college/university name */}
-                        A student-led community at Atria Institute of Technology
+                        A student-led club at Atria Institute of Technology
                     </p>
                 </div>
             </div>

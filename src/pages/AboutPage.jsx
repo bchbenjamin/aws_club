@@ -44,7 +44,6 @@ export default function AboutPage() {
 
     return (
         <div className="page-enter bg-bg-primary dark:bg-bg-dark bg-grid-pattern relative">
-            {/* Page Banner with extreme glowing orbs */}
             <section className="relative pt-32 pb-20 md:pt-48 md:pb-28 overflow-hidden">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none mix-blend-screen dark:mix-blend-plus-lighter" aria-hidden="true">
                     <div className="absolute top-[0%] right-[10%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full bg-amazon-orange/20 dark:bg-amazon-orange/30 blur-[120px] animate-float" />

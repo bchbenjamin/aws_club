@@ -41,8 +41,8 @@ export default function MemberCard({ name, role, bio, imageSrc, featured = false
                     {/* Role Badge */}
                     <span
                         className={`inline-block mt-4 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 ${featured
-                                ? 'bg-amazon-orange text-white group-hover:shadow-[0_0_20px_rgba(255,153,0,0.4)]'
-                                : 'bg-amazon-blue/10 text-amazon-blue dark:bg-amazon-blue/20 group-hover:bg-amazon-blue group-hover:text-white group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]'
+                            ? 'bg-amazon-orange text-white group-hover:shadow-[0_0_20px_rgba(255,153,0,0.4)]'
+                            : 'bg-amazon-blue/10 text-amazon-blue dark:bg-amazon-blue/20 group-hover:bg-amazon-blue group-hover:text-white group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]'
                             }`}
                     >
                         {role}
